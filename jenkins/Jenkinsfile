@@ -18,7 +18,7 @@ pipeline {
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
-                    archiveArtifacts artifacts: 'target/my-app-1.0-SNAPSHOT.jar', fingerprint: true
+                    archiveArtifacts artifacts: 'target/${NAME}-${VERSION}.jar', fingerprint: true
                 }
             }
         }
